@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теги HTML</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Теги HTML с примерами</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Тег</th>
+                <th>Описание</th>
+                <th>Пример использования</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/head" target="_blank">&lt;head&gt;</a></td>
+                <td>Содержит мета-информацию о документе (ссылки на стили, шрифты, скрипты).</td>
+                <td><code>&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;Мой сайт&lt;/title&gt;&lt;/head&gt;</code></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/h1" target="_blank">&lt;h2&gt;</a></td>
+                <td>Заголовок второго уровня.</td>
+                <td><code>&lt;h2&gt;Заголовок второго уровня&lt;/h2&gt;</code></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/h1" target="_blank">&lt;h1&gt;</a></td>
+                <td>Заголовок первого уровня (основной заголовок).</td>
+                <td><code>&lt;h1&gt;Основной заголовок страницы&lt;/h1&gt;</code></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/p" target="_blank">&lt;p&gt;</a></td>
+                <td>Создает абзац текста.</td>
+                <td><code>&lt;p&gt;Это текст в абзаце.&lt;/p&gt;</code></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/i" target="_blank">&lt;i&gt;</a></td>
+                <td>Выделяет текст курсивом.</td>
+                <td><code>&lt;p&gt;Текст с &lt;i&gt;курсивом&lt;/i&gt;.&lt;/p&gt;</code></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/ul" target="_blank">&lt;ul&gt;</a></td>
+                <td>Создает ненумерованный список.</td>
+                <td><code>&lt;ul&gt;&lt;li&gt;Первый пункт&lt;/li&gt;&lt;li&gt;Второй пункт&lt;/li&gt;&lt;/ul&gt;</code></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/li" target="_blank">&lt;li&gt;</a></td>
+                <td>Элемент списка. Может быть использован как в упорядоченных, так и в неупорядоченных списках.</td>
+                <td><code>&lt;ul&gt;&lt;li&gt;Элемент списка 1&lt;/li&gt;&lt;li&gt;Элемент списка 2&lt;/li&gt;&lt;/ul&gt;</code></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/em" target="_blank">&lt;em&gt;</a></td>
+                <td>Выделяет текст с акцентом (по умолчанию текст курсивом).</td>
+                <td><code>&lt;p&gt;Это &lt;em&gt;важное&lt;/em&gt; слово.&lt;/p&gt;</code></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/ol" target="_blank">&lt;ol&gt;</a></td>
+                <td>Создает упорядоченный (нумерованный) список.</td>
+                <td><code>&lt;ol&gt;&lt;li&gt;Первый пункт&lt;/li&gt;&lt;li&gt;Второй пункт&lt;/li&gt;&lt;/ol&gt;</code></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/strong" target="_blank">&lt;strong&gt;</a></td>
+                <td>Выделяет текст с сильным акцентом (обычно жирным шрифтом).</td>
+                <td><code>&lt;p&gt;&lt;strong&gt;Это очень важный текст!&lt;/strong&gt;&lt;/p&gt;</code></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote" target="_blank">&lt;blockquote&gt;</a></td>
+                <td>Оформляет цитаты с отступом.</td>
+                <td><code>&lt;blockquote&gt;"Это цитата, взятая из другого источника."&lt;/blockquote&gt;</code></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/div" target="_blank">&lt;div&gt;</a></td>
+                <td>Контейнер для группировки других элементов, часто используется для стилизации.</td>
+                <td><code>&lt;div class="container"&gt;&lt;h2&gt;Заголовок&lt;/h2&gt;&lt;p&gt;Текст внутри контейнера&lt;/p&gt;&lt;/div&gt;</code></td>
+            </tr>
+            <tr>
+                <td><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/pre" target="_blank">&lt;pre&gt;</a></td>
+                <td>Отображает текст с сохранением форматирования (например, для кода).</td>
+                <td><code>&lt;pre&gt;function hello() { console.log("Hello World"); }&lt;/pre&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
