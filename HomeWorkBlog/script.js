@@ -1,12 +1,10 @@
 document.querySelector('form').addEventListener('submit', async (e) => {
-  e.preventDefault(); // Предотвращаем стандартное поведение формы
-
+  e.preventDefault(); 
   const name = document.querySelector('#name').value.trim();
   const email = document.querySelector('#email').value.trim();
   const comment = document.querySelector('#comment').value.trim();
 
   if (name && email && comment) {
-      // Отправляем данные на сервер для сохранения
       await fetch('http://localhost:3000/save-comment', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -14,7 +12,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
       });
 
       alert('Комментарий сохранен!');
-      document.querySelector('form').reset(); // Сбрасываем форму
+      document.querySelector('form').reset(); 
   } else {
       alert('Пожалуйста, заполните все поля!');
   }
