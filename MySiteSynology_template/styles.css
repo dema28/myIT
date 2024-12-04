@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f0f2f5;
+    background-color: #f1f0f5;
     margin: 0;
     padding: 0;
 }
@@ -17,11 +17,12 @@ header {
 nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #fff;
+    color: #19af2a;
 }
 
 h1, h2 {
-    color: #333;
+    color: #b7c8c3b6;
+    
 }
 
 .main-image {
@@ -42,4 +43,4 @@ h1, h2 {
 section {
     margin: 20px;
     padding: 20
-    
+}
