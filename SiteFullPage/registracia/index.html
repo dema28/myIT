@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма регистрации</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+  <nav>
+      <a href="../index.html">Главная</a>
+      <a href="../about/about.html">Обо мне</a>
+      <a href="../skils/skills.html">Навыки</a>
+      <a href="projects.html">Проекты</a>
+      <a href="../registracia/index.html">Регистрация</a>
+      <a href="contact.html">Контакты</a>
+  </nav>
+</header>
+
+<body>
+  <div class="container">
+    <form class="registration-form" id="registration-form" onsubmit="return validatePasswords()">
+      <h1>Форма регистрации</h1>
+      
+      <label for="first-name">Имя</label>
+      <input type="text" id="first-name" name="first-name" pattern="[A-Za-zА-Яа-яЁё]+" title="Введите только буквы" required>
+
+      <label for="last-name">Фамилия</label>
+      <input type="text" id="last-name" name="last-name" pattern="[A-Za-zА-Яа-яЁё]+" title="Введите только буквы" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Пароль</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm-password">Подтвердить пароль</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+
+      <p id="password-error" style="color: red; display: none;">Пароли не совпадают!</p>
+      <p id="name-error" style="color: red; display: none;">Имя и фамилия должны содержать только буквы!</p>
+
+      <button type="submit">Регистрация</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
