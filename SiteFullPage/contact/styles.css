@@ -18,7 +18,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;;
+  text-align: center;
+  flex-direction: column; /* Меняем направление на колонку */
 }
 
 header {
@@ -34,7 +35,7 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
 }
 
 nav a {
@@ -50,6 +51,20 @@ nav a:hover {
   background-color: #555;
 }
 
+main {
+  flex-grow: 1; /* Заставляет main занимать доступную высоту */
+  width: 100%;
+  max-width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 footer {
   margin-top: auto; /* Отталкивает футер в самый низ */
@@ -60,14 +75,50 @@ footer {
   width: 100%;
 }
 
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2 {
+  color: #fffefe;
+}
+
+a {
+  color: #ff7e5f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
 .container {
-  background: rgba(0, 0, 0, 0); /* Полупрозрачный черный фон для улучшения контраста */
-  padding: 80px;
+  background: rgba(0, 0, 0, 0.6); /* Полупрозрачный черный фон для улучшения контраста */
+  padding: 30px;
   border-radius: 10px;
   width: 100%;
   max-width: 500px; /* Ограничиваем максимальную ширину */
   box-sizing: border-box;
-  margin-top: 100px; /* Отступ сверху */
 }
 
 h1 {
@@ -81,15 +132,18 @@ label {
   margin: 10px 0 5px;
 }
 
-input {
+input, textarea {
   width: 100%; /* Поля ввода занимают всю ширину контейнера */
-  min-width: 200px; /* Минимальная ширина поля */
-  max-width: 500px; /* Максимальная ширина поля */
   padding: 10px;
   margin: 5px 0 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box; /* Включаем отступы в общую ширину */
+}
+
+textarea {
+  min-height: 100px;
+  resize: both; /* Это позволяет изменять размер поля по обеим осям */
 }
 
 button {
@@ -108,16 +162,20 @@ button:hover {
 
 /* Медиазапросы для адаптивности */
 @media (max-width: 768px) {
+  main {
+    width: 50%;
+  }
+
   .container {
+    max-width: 90%; /* Уменьшаем максимальную ширину контейнера на экранах поменьше */
     padding: 20px;
-    max-width: 50%; /* Уменьшаем максимальную ширину контейнера на экранах поменьше */
   }
 
   h1 {
     font-size: 1.5rem;
   }
 
-  input {
+  input, textarea {
     min-width: 80%; /* Поля ввода растягиваются на 100% ширины контейнера */
   }
 
@@ -127,6 +185,10 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+  main {
+    width: 90%;
+  }
+
   .container {
     padding: 15px;
   }
@@ -135,7 +197,7 @@ button:hover {
     font-size: 1.25rem;
   }
 
-  input {
+  input, textarea {
     min-width: 100%; /* Поля ввода растягиваются на всю ширину */
   }
 

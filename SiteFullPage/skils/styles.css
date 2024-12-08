@@ -53,6 +53,7 @@ nav a:hover {
 }
 
 main {
+  flex-grow: 1; /* Заставляет main занимать доступную высоту */
   width: 80%;
   max-width: 900px;
   padding: 20px;
@@ -61,6 +62,15 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 80px; /* Учитываем высоту шапки */
   border-radius: 10px;
+}
+
+footer {
+  margin-top: auto; /* Отталкивает футер в самый низ */
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  width: 100%;
 }
 
 /* Секция с карточками навыков */
