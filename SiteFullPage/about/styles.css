@@ -1,4 +1,3 @@
-/* Сброс стандартных отступов и настроек браузера */
 * {
   margin: 0;
   padding: 0;
@@ -7,35 +6,35 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url('../assets/backgraund.jpg'); /* Укажите путь к вашему изображению */
-  background-size: cover; /* Это растянет изображение на весь экран */
-  background-position: center center; /* Центрирует изображение */
-  background-attachment: fixed; /* Закрепляет изображение, чтобы оно не прокручивалось */
-  height: 100vh; /* Устанавливает высоту экрана */
+  background-image: url('../assets/backgraund.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  min-height: 100vh;
   background-color: #f5f5f5;
   color: #333;
   margin: 0;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 100px;
 }
 
 header {
   width: 100%;
-  /* background-color: #333; */
-  background-color: rgba(51, 51, 51, 0.7); /* Тёмный фон для меню с прозрачностью */
-  padding: 10px 0; /* уменьшен отступ сверху и снизу */
-  position: fixed; /* фиксируем меню в верхней части */
+  background-color: rgba(51, 51, 51, 0.8);
+  padding: 0 0;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* обеспечиваем, чтобы меню было всегда сверху */
+  z-index: 1000;
 }
 
 nav {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -46,32 +45,42 @@ nav a {
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s;
+  line-height: 0.5;
 }
 
 nav a:hover {
   background-color: #555;
 }
 
-main {
-  flex-grow: 1; /* Заставляет main занимать доступную высоту */
-  width: 80%;
-  max-width: 900px;
-  padding: 20px;
-  /* background-color: white; */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-  margin-top: 80px; /* добавлен отступ сверху, чтобы не перекрывалось с фиксированным меню */
-  border-radius: 10px;
-}
-
 footer {
-  margin-top: auto; /* Отталкивает футер в самый низ */
-  padding: 10px;
-  background-color: #333;
+  position: fixed;
+  margin-top: auto;
+  padding: 5px;
+  background-color: rgba(51, 51, 51, 0.8);
   color: #fff;
   text-align: center;
   width: 100%;
+  bottom: 0;
+  z-index: 2000;
 }
 
+footer p {
+  color: #fff;
+  font-size: 14px;
+}
+
+main {
+  flex-grow: 1;
+  width: 80%;
+  max-width: 900px;
+  padding: 0;
+  margin-top: 60px;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
 section h2 {
   font-size: 2rem;
   color: hwb(0 88% 11%);
@@ -86,7 +95,7 @@ section h2 {
 .MyFoto img {
   width: 400px;
   height: 400px;
-  border-radius: 50%;
+  border-radius: 15%;
   object-fit: cover;
 }
 
@@ -100,24 +109,4 @@ p {
   font-size: 1rem;
   line-height: 1.6;
   color: #faf7f7;
-}
-
-footer {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .MyFoto img {
-    width: 150px;
-    height: 150px;
-  }
 }

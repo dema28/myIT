@@ -9,12 +9,12 @@
 </head>
 <header>
   <nav>
-      <a href="../index.html">Главная</a>
-      <a href="../about/about.html">Обо мне</a>
-      <a href="../skils/skills.html">Навыки</a>
-      <a href="projects.html">Проекты</a>
-      <a href="../registracia/index.html">Регистрация</a>
-      <a href="../contact/contact.html">Контакты</a>
+    <a href="../index.html">Главная</a>
+    <a href="../about/about.html">Обо мне</a>
+    <a href="../skils/skills.html">Навыки</a>
+    <a href="../projects/projects.html">Проекты</a>
+    <a href="../registracia/index.html">Регистрация</a>
+    <a href="../contact/contact.html">Контакты</a>
   </nav>
 </header>
 
@@ -22,12 +22,14 @@
   <div class="container">
     <form class="registration-form" id="registration-form" onsubmit="return validatePasswords()">
       <h1>Форма регистрации</h1>
-      
+
       <label for="first-name">Имя</label>
-      <input type="text" id="first-name" name="first-name" pattern="[A-Za-zА-Яа-яЁё]+" title="Введите только буквы" required>
+      <input type="text" id="first-name" name="first-name" pattern="[A-Za-zА-Яа-яЁё]+" title="Введите только буквы"
+        required>
 
       <label for="last-name">Фамилия</label>
-      <input type="text" id="last-name" name="last-name" pattern="[A-Za-zА-Яа-яЁё]+" title="Введите только буквы" required>
+      <input type="text" id="last-name" name="last-name" pattern="[A-Za-zА-Яа-яЁё]+" title="Введите только буквы"
+        required>
 
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
@@ -48,8 +50,8 @@
   <footer>
     <p>&copy; 2024 Денис Новиков. Все права защищены.</p>
   </footer>
+  <script src="validate.js"></script>
 
-  <script src="script.js"></script>
 </body>
 
 </html>

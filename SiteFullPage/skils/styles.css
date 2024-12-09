@@ -1,4 +1,3 @@
-/* Сброс стандартных отступов и настроек браузера */
 * {
   margin: 0;
   padding: 0;
@@ -8,25 +7,25 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
-  background-image: url('../assets/backgraund.jpg'); /* Фон для всего экрана */
-  background-size: cover; /* Фон заполняет весь экран */
-  background-position: center; /* Центрируем фон */
-  background-attachment: fixed; /* Фиксируем фон */
+  background-image: url('../assets/backgraund.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #faf2f2;
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  
+  padding-bottom: 100px;
 }
 
 header {
   width: 100%;
-  background-color: rgba(51, 51, 51, 0.8); /* Полупрозрачный фон для шапки */
-  padding: 10px 0;
+  background-color: rgba(51, 51, 51, 0.8);
+  padding: 0, 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,6 +35,7 @@ header {
 nav {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -46,34 +46,46 @@ nav a {
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s;
+  line-height: 0.5;
 }
 
 nav a:hover {
   background-color: #555;
 }
 
-main {
-  flex-grow: 1; /* Заставляет main занимать доступную высоту */
-  width: 80%;
-  max-width: 900px;
-  padding: 20px;
-  background-image: url(../assets/_Mebruke\ Kizil\ Apps\ on\ the\ App\ Store.jpg);
-  /* background-color: rgba(255, 255, 255, 0.9); Полупрозрачный фон */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 80px; /* Учитываем высоту шапки */
-  border-radius: 10px;
-}
-
 footer {
-  margin-top: auto; /* Отталкивает футер в самый низ */
-  padding: 10px;
-  background-color: #333;
+  position: fixed;
+  margin-top: auto;
+  padding: 5px;
+  background-color: rgba(51, 51, 51, 0.8);
   color: #fff;
   text-align: center;
   width: 100%;
+  bottom: 0;
+  z-index: 2000;
 }
 
-/* Секция с карточками навыков */
+footer p {
+  color: #fff;
+  font-size: 15px;
+}
+
+main {
+  width: 70%;
+  max-width: 55%;
+  padding: 55px;
+  background-image: url(../assets/_Mebruke\ Kizil\ Apps\ on\ the\ App\ Store.jpg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 45px;
+  font-size: 35px;
+  letter-spacing: 5px;
+}
+
 .skills-section h2 {
   font-size: 2rem;
   color: #444;
@@ -82,10 +94,10 @@ footer {
 }
 
 .skills-container {
-  display: grid; /* Используем сетку */
-  grid-template-columns: repeat(2, 1fr); /* Две карточки в ряд */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  justify-items: center; /* Центрируем карточки */
+  justify-items: center;
 }
 
 .skill-card {
@@ -97,7 +109,7 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* Обрезает фон карточки */
+  overflow: hidden;
   width: 250px;
   height: 200px;
 }
@@ -105,10 +117,9 @@ footer {
 .skill-card img {
   width: 100px;
   height: 100px;
-  object-fit: contain; /* Сохраняет пропорции изображения */
+  object-fit: contain;
   margin-bottom: 10px;
 }
-
 
 .skill-card:hover {
   transform: translateY(-10px);
@@ -139,14 +150,14 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../assets/backgraund.jpg') no-repeat center / cover; /* Фон карточки */
-  opacity: 1; /* Прозрачность фона */
-  z-index: 0; /* Слой под содержимым */
+  background: url('../assets/backgraund.jpg') no-repeat center / cover;
+  opacity: 1;
+  z-index: 0;
 }
 
 .skill-card * {
   position: relative;
-  z-index: 1; /* Содержимое над фоном */
+  z-index: 1;
 }
 
 footer {
@@ -158,6 +169,6 @@ footer {
 
 @media (max-width: 768px) {
   .skills-container {
-    grid-template-columns: 1fr; /* Одна карточка в ряд на маленьких экранах */
+    grid-template-columns: 1fr;
   }
 }
