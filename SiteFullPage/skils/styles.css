@@ -1,58 +1,64 @@
+/* Сбрасываем стандартные отступы и устанавливаем базовые настройки */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Стили для body: устанавливаем фон, шрифты, цвет текста, центрирование */
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
-  background-image: url('../assets/backgraund.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-image: url('../assets/backgraund.jpg'); /* Изображение фона */
+  background-size: cover; /* Масштабируем изображение */
+  background-position: center; /* Центруем изображение */
+  background-attachment: fixed; /* Фиксируем фон */
   color: #faf2f2;
   margin: 0;
-  min-height: 100vh;
+  min-height: 100vh; /* Минимальная высота страницы */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; /* Вертикальное выравнивание */
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 100px; /* Дополнительное пространство снизу */
 }
 
+/* Фиксированный хедер с прозрачным фоном */
 header {
   width: 100%;
-  background-color: rgba(51, 51, 51, 0.8);
-  padding: 0, 0;
+  background-color: rgba(51, 51, 51, 0.8); /* Прозрачность */
+  padding: 0;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1000; /* Приоритет отображения */
 }
 
+/* Навигация: флекс-бокс для центрирования и отступы между ссылками */
 nav {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  flex-wrap: wrap; /* Перенос строк при недостатке места */
+  gap: 30px; /* Расстояние между ссылками */
 }
 
+/* Стили для ссылок в навигации */
 nav a {
   color: white;
-  text-decoration: none;
+  text-decoration: none; /* Убираем подчеркивание */
   font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  line-height: 0.5;
+  padding: 10px 20px; /* Внутренние отступы */
+  border-radius: 5px; /* Скругленные края */
+  transition: background-color 0.3s; /* Плавный переход при наведении */
+  line-height: 0.5; /* Высота строки */
 }
 
 nav a:hover {
-  background-color: #555;
+  background-color: #555; /* Цвет фона при наведении */
 }
 
+/* Футер: фиксированное положение и стили текста */
 footer {
   position: fixed;
   margin-top: auto;
@@ -70,22 +76,22 @@ footer p {
   font-size: 15px;
 }
 
+/* Основной контент страницы */
 main {
-  width: 70%;
-  max-width: 55%;
-  padding: 55px;
-  background-image: url(../assets/_Mebruke\ Kizil\ Apps\ on\ the\ App\ Store.jpg);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 80px;
-  border-radius: 10px;
+  width: 70%; /*Ширина секции*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+  margin-top: 80px; /* Отступ сверху */
+  border-radius: 10px; /* Скругленные края */
 }
 
+/* Заголовки внутри секций */
 h2 {
   margin-bottom: 45px;
   font-size: 35px;
-  letter-spacing: 5px;
+  letter-spacing: 5px; /* Межбуквенный интервал */
 }
 
+/* Стили секции навыков */
 .skills-section h2 {
   font-size: 2rem;
   color: #444;
@@ -93,13 +99,15 @@ h2 {
   text-align: center;
 }
 
+/* Сетка для карточек навыков */
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Две колонки */
   gap: 20px;
-  justify-items: center;
+  justify-items: center; /* Центрируем карточки */
 }
 
+/* Карточка навыков: стили и анимация */
 .skill-card {
   position: relative;
   background-color: #fff;
@@ -108,30 +116,34 @@ h2 {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация */
+  overflow: hidden; /* Скрываем лишнее */
   width: 250px;
   height: 200px;
 }
 
+/* Изображение внутри карточки */
 .skill-card img {
   width: 100px;
   height: 100px;
-  object-fit: contain;
+  object-fit: contain; /* Сохранение пропорций */
   margin-bottom: 10px;
 }
 
+/* Эффект при наведении на карточку */
 .skill-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px); /* Смещение вверх */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Усиление тени */
 }
 
+/* Иконки внутри карточки */
 .skill-card i {
   font-size: 2rem;
   color: #333;
   margin-bottom: 10px;
 }
 
+/* Текст внутри карточки */
 .skill-card h3 {
   font-size: 1.5rem;
   color: #444;
@@ -143,6 +155,7 @@ h2 {
   color: #f5f5f5;
 }
 
+/* Фон карточки */
 .skill-card::before {
   content: '';
   position: absolute;
@@ -152,23 +165,20 @@ h2 {
   height: 100%;
   background: url('../assets/backgraund.jpg') no-repeat center / cover;
   opacity: 1;
-  z-index: 0;
+  z-index: 0; /* Располагаем под текстом */
 }
 
+/* Устанавливаем относительное позиционирование для текста */
 .skill-card * {
   position: relative;
   z-index: 1;
 }
 
-footer {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-}
-
+/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .skills-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Одна колонка */
   }
 }
+
+
