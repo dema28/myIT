@@ -280,8 +280,8 @@
   position: static;
 }
 .icon {
-  width: 4.58%;
-  height: 1.15%;
+  width: 66px;
+  height: 66px;
   position: absolute;
   right: 82.29%;
   left: 13.12%;
@@ -403,8 +403,8 @@
   top: calc(50% - 1720px);
 }
 .icon2 {
-  width: 4.51%;
-  height: 1.13%;
+  width: 65px;
+  height: 65px;
   position: absolute;
   right: 56.53%;
   left: 38.96%;
@@ -467,8 +467,8 @@
   top: calc(50% - 1609px);
 }
 .icon3 {
-  width: 4.03%;
-  height: 1.01%;
+  width: 58px;
+  height: 58px;
   position: absolute;
   right: 31.11%;
   left: 64.86%;
@@ -709,23 +709,23 @@
   overflow: visible;
 }
 .object5 {
-  width: 6.94%;
-  height: 1.74%;
+  width: 100px;
+  height: 100px;
   position: absolute;
   right: 27.92%;
-  left: 65.14%;
+  left: 938px;
   bottom: 63.79%;
-  top: 34.47%;
+  top: 1977px;
   overflow: visible;
 }
 .overlay7 {
-  width: 28.75%;
-  height: 4.93%;
+  width: 100px;
+  height: 100px;
   position: absolute;
   right: 6.11%;
-  left: 65.14%;
+  left: 938px;
   bottom: 60.6%;
-  top: 34.47%;
+  top: 1977px;
   overflow: visible;
 }
 .overlay8 {
@@ -746,9 +746,9 @@
   font-weight: 700;
   position: absolute;
   right: 19.17%;
-  left: 67.92%;
-  width: 12.92%;
-  top: calc(50% - 695px);
+  left: 978px;
+  width: 186px;
+  top: 2173px;
 }
 .header3 {
   color: #102746;
