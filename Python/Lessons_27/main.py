@@ -123,13 +123,13 @@ from operator import index
 #         print("Вы младше 18 лет", res)
 
 
-key_in1 = input("Ведите число: ")
-key_in2 = input("Ведите второе число: ")
-sum_result = (int(key_in1) + int(key_in2))
-sum_result2 = (int(key_in1) * int(key_in2))
-
-
-print(sum_result)
+# key_in1 = input("Ведите число: ")
+# key_in2 = input("Ведите второе число: ")
+# sum_result = (int(key_in1) + int(key_in2))
+# sum_result2 = (int(key_in1) * int(key_in2))
+#
+#
+# print(sum_result)
 
 
 
