@@ -55,18 +55,38 @@
 #     print("число нечетное")
 
 
-# year = int(input("Год: "))
-#
-# if year % 4 == 0:
-#     if year % 100 == 0:
-#         if year % 400 == 0:
-#             print("год високосный")
-#         else:
-#             print("год не високосный")
-#     else:
-#         print("год високосный")
+age = 70
+
+if age < 18:
+    print("Вы несовершеннолетний.")
+elif age < 65:
+    print("Вы взрослый.")
+else:
+    print("Вы пенсионер.")
 
 
+
+age = 20
+has_permission = True
+
+if age >= 18:
+    if has_permission:
+        print("Вы можете войти.")
+    else:
+        print("У вас нет разрешения.")
+else:
+    print("Вы несовершеннолетний.")
+
+
+
+number = int(input("Введите число: "))
+
+if number > 0:
+    print("Число положительное.")
+elif number < 0:
+    print("Число отрицательное.")
+else:
+    print("Число равно нулю.")
 
 
 
