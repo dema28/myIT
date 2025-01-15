@@ -1,3 +1,4 @@
+
 number = input("Введите трёхзначное число: ")
 
 if (number.isdigit() and len(number) == 3) or (number.startswith('-') and number[1:].isdigit() and len(number) == 4):

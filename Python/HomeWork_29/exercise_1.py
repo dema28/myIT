@@ -1,3 +1,4 @@
+
 number = input("Ведите двузначное число: ")
 if (number.isdigit()) and len(number) == 2 or (number.startswith('-') and number[1:].isdigit() and len(number) == 3):
     if number.startswith('-'):
