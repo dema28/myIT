@@ -1,7 +1,11 @@
 
 number = input("Введите трёхзначное число: ")
 
-if (number.isdigit() and len(number) == 3) or (number.startswith('-') and number[1:].isdigit() and len(number) == 4):
+if ((number.isdigit()
+    and len(number) == 3)
+        or (number.startswith('-')
+            and number[1:].isdigit()
+                and len(number) == 4)):
     abs_number = number[1:] if number.startswith('-') else number
 
     for digit in abs_number:
