@@ -50,11 +50,11 @@
 # print(main(2))
 
 
-def openfile(filename):
-    with open(filename, "r") as file:
-        content = file.read()
-        return content
-print(openfile("exemple.txt"))
+# def openfile(filename):
+#     with open(filename, "r") as file:
+#         content = file.read()
+#         return content
+# print(openfile("exemple.txt"))
 
 
 
