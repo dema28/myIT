@@ -57,3 +57,4 @@ def openfile(filename):
 print(openfile("exemple.txt"))
 
 
+
