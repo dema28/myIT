@@ -1,0 +1,6 @@
+Текст 1
+Текст 2
+Текст 3
+
+Add new string
+New line added.
