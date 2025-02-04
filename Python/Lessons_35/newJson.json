@@ -1,0 +1,69 @@
+{
+    "data": {
+        "search": {
+            "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+                "__typename": "PageInfo"
+            },
+            "edges": [
+                {
+                    "node": {
+                        "id": "QWdncmVnYXRpb246MzcyODA5",
+                        "availableEntities": {
+                            "edges": [],
+                            "__typename": "EntityConnection"
+                        },
+                        "otherEntities": {
+                            "edges": [
+                                {
+                                    "node": {
+                                        "id": "Vm9kOjE2MDgzMQ",
+                                        "aggregationId": "QWdncmVnYXRpb246MzcyODA5",
+                                        "type": "VOD",
+                                        "name": "TVOD 2 - Last Week Tonight With John Oliver",
+                                        "originalName": "TVOD 2 - Last Week Tonight With John Oliver",
+                                        "description": "John Oliver, jedna z nejzábavnějších osobností americké televizní scény, přichází na HBO s novou řadou své talk show a opět nabízí osobité stanovisko k jakéko",
+                                        "audience": "OVER_12",
+                                        "genres": [
+                                            "Comedy"
+                                        ],
+                                        "channelKey": null,
+                                        "media": {
+                                            "landscape": null,
+                                            "screenshots": [
+                                                "https://cnt01.gtm-stage.orange.sk/contentserver/contents/12463587/categories/img/sizes/1024x576/canvas/1024x576/12463587.jpg",
+                                                "https://cnt01.gtm-stage.orange.sk/contentserver/contents/12463588/categories/img/sizes/1024x576/canvas/1024x576/12463588.jpg"
+                                            ],
+                                            "__typename": "Media"
+                                        },
+                                        "price": {
+                                            "value": 2.0397,
+                                            "currency": "EUR",
+                                            "formatted": "2.04 €",
+                                            "__typename": "Price"
+                                        },
+                                        "playTime": 2090940.9999999998,
+                                        "resolution": "SD",
+                                        "year": 2016,
+                                        "audioLanguages": [
+                                            "en"
+                                        ],
+                                        "subtitleLanguages": null,
+                                        "rating": 80,
+                                        "__typename": "Vod"
+                                    },
+                                    "__typename": "EntityEdge"
+                                }
+                            ],
+                            "__typename": "EntityConnection"
+                        },
+                        "__typename": "EntityAggregation"
+                    },
+                    "__typename": "AggregationEdge"
+                }
+            ],
+            "__typename": "AggregationConnection"
+        }
+    }
+}
