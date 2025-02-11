@@ -42,8 +42,6 @@ def calculator():
     except ZeroDivisionError as e:
         print(f"Ошибка: {e}")
 
-    finally:
-        print("Программа завершена.")
 
 calculator()
 
