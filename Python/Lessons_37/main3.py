@@ -8,15 +8,38 @@
 не прерывая работы"""
 
 import json
-from tkinter.font import names
+
+def validate_user(user):
+    errors = []
+    if 'name' not in user:
+        errors.append("отсутствует поле 'name'")
+    if 'age' not in user:
+        errors.append("отсутствует поле 'age'")
+    if 'email' not in user:
+        errors.append("отсутствует поле 'email'")
+    return errors
+
+def main():
+    try:
+        with open('new_file.json', 'r') as file:
+            users = json.load(file)
+    except FileNotFoundError:
+        print("Файл 'new_file.json' не найден.")
+        return
+    except json.JSONDecodeError:
+        print("Ошибка декодирования JSON. Проверьте формат файла.")
+        return
+
+    for idx, user in enumerate(users, 1):
+        errors = validate_user(user)
+        if errors:
+            print(f"Ошибки у пользователя {idx}: {', '.join(errors)}")
+        else:
+            print(f"Пользователь {idx}: все поля в порядке")
+
+main()
 
 
-def read_json_file(new_file):
-    with open(new_file, 'r') as file:
-        data = json.load(file)
-    return data
-
-data = read_json_file
 
 
 
