@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ivan Ivanov",
+      "email": "ivan@example.com",
+      "age": 28,
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "Maria Petrova",
+      "email": "maria@example.com",
+      "age": 34,
+      "isActive": false
+    },
+    {
+      "id": 3,
+      "name": "Alexey Sidorov",
+      "email": "alexey@example.com",
+      "age": 22,
+      "isActive": true
+    }
+  ],
+  "products": [
+    {
+      "id": 101,
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 1200.50
+    },
+    {
+      "id": 102,
+      "name": "Smartphone",
+      "category": "Electronics",
+      "price": 800.00
+    },
+    {
+      "id": 103,
+      "name": "Book",
+      "category": "Literature",
+      "price": 15.99
+    }
+  ]
+}
