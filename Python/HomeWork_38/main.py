@@ -1,7 +1,7 @@
 """Используйте функции из этих модулей для обработки и анализа строки, введённой
 пользователем."""
-from HomeWorK_38.string_utils.string_analysis import count_vowels, count_char
-from HomeWorK_38.string_utils.string_operations import reverse_string, capitalize_words
+from HomeWork_38.string_utils.string_analysis import count_vowels, count_char
+from HomeWork_38.string_utils.string_operations import reverse_string, capitalize_words
 
 
 
