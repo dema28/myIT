@@ -57,10 +57,8 @@ class TestTextBox(unittest.TestCase):
         output = self.driver.find_element(By.XPATH, "//*[@id='output']")
         self.assertTrue(output.is_displayed())
 
-
     def tearDown(self):
         self.driver.quit()
-
 
 if __name__ == "__main__":
     unittest.main()
