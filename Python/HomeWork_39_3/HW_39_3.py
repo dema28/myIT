@@ -12,6 +12,7 @@ class TestPageNavigation(unittest.TestCase):
     def setUp(self):
         chrome_options = Options()
         chrome_options.add_argument("--start-maximized")
+
         self.driver = webdriver.Chrome(options=chrome_options)
         self.driver.get("https://demoqa.com/text-box")  # Начальная страница
 
@@ -49,7 +50,6 @@ class TestPageNavigation(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
-
 
 if __name__ == "__main__":
     unittest.main()
