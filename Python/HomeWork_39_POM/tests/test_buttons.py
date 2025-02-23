@@ -2,8 +2,8 @@ import unittest
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from HomeWork_39.pages.buttons_page import ButtonsPage
-from HomeWork_39.utils.driver_manager import DriverManager
+from HomeWork_39_POM.pages.buttons_page import ButtonsPage
+from HomeWork_39_POM.utils.driver_manager import DriverManager
 
 
 class TestButtons(unittest.TestCase):
