@@ -2,7 +2,6 @@ import os
 import unittest
 import time
 from time import sleep
-
 from selenium import webdriver
 from selenium.common import NoSuchElementException, TimeoutException
 from selenium.webdriver import ActionChains, Keys
@@ -190,23 +189,7 @@ class TestFormPractice(unittest.TestCase):
         os.system("file_update.exe")
 
 
-    def test_form_practice(self):
-        self.addFirstName()
-        self.addLastName()
-        self.addEmail()
-        self.addNumberPhone("7999999999")
-        self.Date_of_birth()
-        self.scroll_to_element_select_picture()
-        self.pickGender()
-        self.pickSubject()
-        self.pick_check_boxes()
-        self.download_file()
-        self.add_current_address()
-        self.scroll_to_element_city()
-        self.pick_state_city()
-        self.submit()
 
-        self.validation_tests()
 
     def validation_tests(self):
         try:
@@ -257,7 +240,22 @@ class TestFormPractice(unittest.TestCase):
             print("Модальное окно не появилось в течение времени ожидания.")
             self.fail("Модальное окно не появилось.")
 
-
+    def test_form_practice(self):
+        self.addFirstName()
+        self.addLastName()
+        self.addEmail()
+        self.addNumberPhone("7999999999")
+        self.Date_of_birth()
+        self.scroll_to_element_select_picture()
+        self.pickGender()
+        self.pickSubject()
+        self.pick_check_boxes()
+        self.download_file()
+        self.add_current_address()
+        self.scroll_to_element_city()
+        self.pick_state_city()
+        self.submit()
+        self.validation_tests()
 
     def tearDown(self):
         self.driver.quit()
