@@ -15,7 +15,6 @@ class TestButtons(unittest.TestCase):
         self.wait = WebDriverWait(self.driver, 10)
 
     def test_double_click(self):
-        """Проверка двойного клика на кнопке."""
         btn_double_click = self.wait.until(
             EC.element_to_be_clickable(self.buttons_page.DOUBLE_CLICK_BUTTON)
         )
@@ -27,7 +26,6 @@ class TestButtons(unittest.TestCase):
         self.assertEqual(message.text, "You have done a double click")
 
     def test_right_click(self):
-        """Проверка правого клика на кнопке."""
         btn_right_click = self.wait.until(
             EC.element_to_be_clickable(self.buttons_page.RIGHT_CLICK_BUTTON)
         )
@@ -39,7 +37,6 @@ class TestButtons(unittest.TestCase):
         self.assertEqual(message.text, "You have done a right click")
 
     def test_dynamic_click(self):
-        """Проверка обычного клика на кнопке."""
         btn_click = self.wait.until(
             EC.element_to_be_clickable(self.buttons_page.CLICK_ME_BUTTON)
         )
