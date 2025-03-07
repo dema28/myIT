@@ -8,7 +8,6 @@ from selenium.common.exceptions import StaleElementReferenceException, NoSuchEle
 import json
 
 def save_to_txt(data, filename="products.txt"):
-    """Сохраняет данные о товарах в текстовый файл."""
     with open(filename, "a", encoding="utf-8") as file:
         for item in data:
             file.write(f"Название: {item['name']}\n")
@@ -18,13 +17,11 @@ def save_to_txt(data, filename="products.txt"):
     print(f"Данные сохранены в {filename}")
 
 def save_to_json(data, filename="products.json"):
-    """Сохраняет данные в JSON-файл."""
     with open(filename, "w", encoding="utf-8") as file:
         json.dump(data, file, ensure_ascii=False, indent=4)
     print(f"Данные сохранены в файл {filename}")
 
 def click_element(xpath, wait, driver):
-    """Кликает на элемент, предварительно дождавшись его появления."""
     try:
         element = wait.until(EC.element_to_be_clickable((By.XPATH, xpath)))
         driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
@@ -35,9 +32,7 @@ def click_element(xpath, wait, driver):
         return False
 
 def extract_product_data(driver, wait):
-    """Извлекает данные о товарах."""
     try:
-        # Ожидание появления товаров на странице
         wait.until(EC.presence_of_element_located((By.XPATH, "//*[@class='product-box']")))
         products = driver.find_elements(By.XPATH, "//*[@class='product-box']")
         product_data = []
@@ -54,7 +49,6 @@ def extract_product_data(driver, wait):
                 print("Элемент не найден, пропуск товара")
             except StaleElementReferenceException:
                 print("Элемент устарел, повторный поиск...")
-                # Повторно ищем элементы
                 products = driver.find_elements(By.XPATH, "//*[@class='product-box']")
                 continue
 
@@ -65,27 +59,24 @@ def extract_product_data(driver, wait):
 
 def price_sorting(driver, wait):
     driver.get("https://www.datart.cz/")
-    click_element("//button[@id='c-p-bn']", wait, driver)  # Принять куки
-    click_element("//nav//li[contains(.//strong, 'Telefony')]", wait, driver)  # Категория
-    click_element("//snippet//div[4]/a/div", wait, driver)  # Подкатегория
-    # click_element("//*[@class='sort-panel-slider-item']/a[normalize-space(text())='Nejlevnější']", wait, driver)  # Фильтр
-    click_element("//*[@id='sort-panel-slider-tabs']/li[1]/a", wait, driver)  # Применить фильтр
+    click_element("//button[@id='c-p-bn']", wait, driver)
+    click_element("//nav//li[contains(.//strong, 'Telefony')]", wait, driver)
+    click_element("//snippet//div[4]/a/div", wait, driver)
+    # click_element("//*[@class='sort-panel-slider-item']/a[normalize-space(text())='Nejlevnější']", wait, driver)
+    # click_element("//*[@id='sort-panel-slider-tabs']/li[1]/a", wait, driver)
 
-    # Ожидание обновления страницы после фильтрации
-    wait.until(EC.presence_of_element_located((By.XPATH, "//*[@class='product-box']")))
+    # wait.until(EC.presence_of_element_located((By.XPATH, "//*[@class='product-box']")))
 
     data = extract_product_data(driver, wait)
     save_to_txt(data)
     save_to_json(data)
 
-# Настройка драйвера
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
+options.add_argument("--disable-blink-features=AutomationControlled")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 wait = WebDriverWait(driver, 10)
 
-# Запуск
 price_sorting(driver, wait)
 
-# Закрытие драйвера
 driver.quit()
