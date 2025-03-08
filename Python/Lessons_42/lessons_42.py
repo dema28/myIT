@@ -1,5 +1,5 @@
 """Выбрать товары на сайте и проверить что их цены отсортированы в порядке убывания.
-нужно использовать selenimum"""
+Нужно использовать selenimum"""
 import time
 
 from selenium import webdriver
